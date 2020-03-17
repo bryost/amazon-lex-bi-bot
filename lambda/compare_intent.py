@@ -44,7 +44,11 @@ logger.setLevel(logging.DEBUG)
 def lambda_handler(event, context):
     logger.debug('<<BIBot>> Lex event info = ' + json.dumps(event))
 
-    session_attributes = event['sessionAttributes']
+    session_attributes = event.get('sessionAttributes', None)
+
+    if session_attributes is None:
+        session_attributes = {}
+
     logger.debug('<<BIBot>> lambda_handler: session_attributes = ' + json.dumps(session_attributes))
 
     config_error = helpers.get_bibot_config()
