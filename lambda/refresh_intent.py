@@ -121,7 +121,7 @@ def refresh_intent_handler(intent_request, session_attributes):
                                   abortStatement=response['abortStatement'],
                                   idleSessionTTLInSeconds=response['idleSessionTTLInSeconds'],
                                   voiceId=response['voiceId'],
-                                  processBehavior='SAVE',
+                                  processBehavior='BUILD',
                                   locale=response['locale'],
                                   checksum=response['checksum'],
                                   childDirected=response['childDirected']
