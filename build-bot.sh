@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Builds the bot, intents, and custom slot types
+# Builds the bot, intents, and custom slot types 
 #
 
 #
